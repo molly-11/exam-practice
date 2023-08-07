@@ -2,14 +2,31 @@ body {
   background-color: white;
 }
 
-App {
-  font-family: arial;
-}
+
 
 .charContainer{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  margin-top: 30px;
 }
 
+
+#subscribeDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form{
+text-align: center;
+margin: 20px;
+}
+
+#loading{
+  display: block;
+  text-align: center;
+margin: 20px;
+}

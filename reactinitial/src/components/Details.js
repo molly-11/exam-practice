@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material"
 
 
 function  Details({details, showMore}){
@@ -6,9 +7,8 @@ function  Details({details, showMore}){
 
   return(
 
-    <p>{showMore ? details :""} </p>
+    <Typography>{showMore ? details :""} </Typography>
   )
-
 
 }
 

@@ -1,7 +1,7 @@
 function LoadingMask(){
 
   return(
-    <div>Loading</div>
+    <div id="loading">Loading</div>
   )
 }
 

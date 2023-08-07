@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
 function Subscription() {
@@ -36,6 +36,9 @@ function Subscription() {
   const sendPost = () => {
     fetch("https://demoapi.com/api/series/newsletter", {
       method: "POST",
+      headers:{
+        "Content-Type":"application/json",
+      },
       body: JSON.stringify({
         email: email,
       }),
@@ -58,13 +61,17 @@ function Subscription() {
         Subscribe to our newsletter
       </Typography>
       <form style={{ display: `${displayForm}` }}>
-        <input
-          type="email"
+        <TextField
+          id="outlined-basic"
+          label="Outlined"
+          variant="outlined"
           onChange={(e) => {
             emailValidation(e);
           }}
-        ></input>
-        <button
+        />
+
+        <Button
+          variant="contained"
           disabled={buttonOn}
           onClick={(e) => {
             e.preventDefault();
@@ -72,9 +79,21 @@ function Subscription() {
           }}
         >
           Subscribe
-        </button>
+        </Button>
       </form>
-      <div style={{ display: `${subscribeResponse}` }}> Subscribed </div>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          "& > :not(style)": {
+            m: 1,
+            width: 128,
+            height: 128,
+          },
+        }}
+      >
+        <div style={{ display: `${subscribeResponse}` }}> Subscribed </div>
+      </Box>
     </div>
   );
 }
