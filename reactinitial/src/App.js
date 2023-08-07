@@ -19,7 +19,7 @@ const App = () => {
   return (
     <>
       <div>
-        <Typography variant="h1" sx={{  fontSize: '3rem', textAlign: "center"}} >
+        <Typography variant="h1" sx={{  fontSize: '3rem', textAlign: "center"} } font-family= "Arial">
           Series Api
         </Typography>
         {!fetchedData && <LoadingMask />}

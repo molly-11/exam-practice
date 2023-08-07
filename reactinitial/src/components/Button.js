@@ -24,7 +24,7 @@ function ButtonSubs({ name, details }) {
       }}
     >
       <div className="charData">
-        <Typography>{name} </Typography>
+        <Typography font-family= "Arial">{name} </Typography>
         <Details showMore={showMore} details={details} />
       </div>
       <div>
