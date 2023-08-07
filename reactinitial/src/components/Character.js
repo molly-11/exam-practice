@@ -1,5 +1,6 @@
 
-import Button from "./Button";
+import ButtonSubs from "./Button";
+
 
 
 function Character(props) {
@@ -15,7 +16,7 @@ function Character(props) {
           
            
           
-          <Button name = {dt.name} details={dt.details}/>
+          <ButtonSubs name = {dt.name} details={dt.details}/>
 
         </div>
       ))}

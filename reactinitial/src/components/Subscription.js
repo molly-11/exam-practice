@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
 function Subscription() {
@@ -7,7 +8,6 @@ function Subscription() {
   const [emailSent, setEmailSent] = useState(false);
   const [subscribeResponse, setSubscribeResponse] = useState("none");
   const [displayForm, setDisplayForm] = useState("block");
- 
 
   const emailValidation = (e) => {
     setEmail(e.target.value);
@@ -44,8 +44,6 @@ function Subscription() {
       .then((data) => {
         console.log(data);
         console.log(`Email sent: ${email}`);
-
-        
       });
 
     setEmailSent(true);
@@ -56,8 +54,9 @@ function Subscription() {
 
   return (
     <div id="subscribeDiv" style={{ display: `${displaySubs}` }}>
-      <h1>Subscribe to our newsletter </h1>
-
+      <Typography variant="h2" sx={{ fontSize: "2.5rem", textAlign: "center" }}>
+        Subscribe to our newsletter
+      </Typography>
       <form style={{ display: `${displayForm}` }}>
         <input
           type="email"

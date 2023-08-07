@@ -1,8 +1,9 @@
 import { useState } from "react";
+import Button from '@mui/material/Button';
 
 import Details from "./Details";
 
-function Button({ name, details }) {
+function ButtonSubs({ name, details }) {
   const [showMore, setShowmore] = useState(false);
 
   return (
@@ -11,7 +12,8 @@ function Button({ name, details }) {
         <p>{name} </p>
         <Details showMore={showMore} details={details} />
       </div>
-      <button
+      <Button
+      variant="contained"
         type="button"
         onClick={() => {
           setShowmore(!showMore);
@@ -19,9 +21,9 @@ function Button({ name, details }) {
       >
         {" "}
         {showMore ? "Show more" : "Show less"}{" "}
-      </button>{" "}
+      </Button>{" "}
       
     </>
   );
 }
-export default Button;
+export default ButtonSubs;
